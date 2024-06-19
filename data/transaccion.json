@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "ventanilla": "3",
+        "fecha": "20/05/2024",
+        "tiempo": "14.137120344299152",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 2,
+        "ventanilla": "3",
+        "fecha": "20/05/2024",
+        "tiempo": "17.985095855031595",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 3,
+        "ventanilla": "3",
+        "fecha": "20/05/2024",
+        "tiempo": "13.951942340003027",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 4,
+        "ventanilla": "1",
+        "fecha": "20/05/2024",
+        "tiempo": "8.172382091533688",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 5,
+        "ventanilla": "3",
+        "fecha": "21/05/2024",
+        "tiempo": "12.523185926589582",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 6,
+        "ventanilla": "2",
+        "fecha": "21/05/2024",
+        "tiempo": "9.04023787818721",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 7,
+        "ventanilla": "2",
+        "fecha": "21/05/2024",
+        "tiempo": "14.68024842125004",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 8,
+        "ventanilla": "3",
+        "fecha": "21/05/2024",
+        "tiempo": "18.81192635236137",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 9,
+        "ventanilla": "3",
+        "fecha": "21/06/2024",
+        "tiempo": "7.330401841779275",
+        "detalle": "primera transaccion en vistas",
+        "calificacion": ""
+    },
+    {
+        "id": 10,
+        "ventanilla": "3",
+        "fecha": "20/05/2024",
+        "tiempo": "6.475681671163469",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 11,
+        "ventanilla": "3",
+        "fecha": "21/05/2024",
+        "tiempo": "6.781179676372572",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 12,
+        "ventanilla": "1",
+        "fecha": "07/05/2024",
+        "tiempo": "6.340708276146334",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 13,
+        "ventanilla": "3",
+        "fecha": "27/08/2024",
+        "tiempo": "15.349389490705274",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 14,
+        "ventanilla": "1",
+        "fecha": "11/03/2024",
+        "tiempo": "12.504793848836913",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    },
+    {
+        "id": 15,
+        "ventanilla": "2",
+        "fecha": "15/02/2024",
+        "tiempo": "12.326586941517098",
+        "detalle": "transacci\u00f3n diaria com\u00fan",
+        "calificacion": ""
+    }
+]
