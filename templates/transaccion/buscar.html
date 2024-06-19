@@ -1,0 +1,112 @@
+{% extends "template.html" %}
+{% block content %}
+
+<h2 class="text-white">Lista de Transacciones </h2>
+<div class = "booking-from-body">
+    <!-- <a href="/personas/agregar" class="btn btn-danger">Agregar</a> -->
+    <!-- <a href="/personas/ordenar" class="btn btn-danger">Ordenar</a>    class="custom-form booking-form" method="post" action="/personas/buscar" role="form"-->
+
+     <form class="custom-form booking-form" method="post" action="/transaccion/buscar" role="form">
+        <select id="primer-select" name = "metodo">
+            <option >metodo a usar...</option>
+            <option value="1" >Binary</option>
+            <option value="2">Binary Secuencial</option>
+        </select>
+        
+        <select id="segundo-select" name="selectcosa">
+            <option >criterio a usar...</option>
+            <option value="_ventanilla" >Ventanilla</option>
+            <option value="_fecha">Fecha</option>
+            
+        </select>
+
+        <label>Atributo a buscar</label> : <input type="text" name="nombre" />
+        
+    </form>
+
+
+    <a href="#" id="mi-formulario" class="btn btn-primary">Buscar</a>
+    
+    <table id="tabla" class="table text-white">
+        <thead>
+            <th>Nro</th>
+            <th>Ventanilla</th>
+            <th>Fecha</th>
+            <th>Detalle</th>
+
+        </thead>
+        <tbody>
+            {% for item in lista %}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.ventanilla}}</td>
+                <td>{{item.fecha}}</td>
+                <td>{{item.detalle}}</td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+
+
+    </table>
+
+
+
+</div>
+
+
+<!-- <script>
+    const form = document.querySelector('form');
+    const tabla = document.getElementById('tabla');
+
+    form.addEventListener('submit', function(event) {
+       event.preventDefault(); // Evitar que se recargue la página
+
+        const formData = new FormData(form);
+
+        fetch('/personas/buscar', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            actualizarTabla(data);
+        })
+        .catch(error => console.error(error));
+    });
+
+    function actualizarTabla(datos) {
+        tabla.tBodies[0].innerHTML = '';
+
+        datos.forEach(item => {
+            const fila = document.createElement('tr');
+            fila.innerHTML = `
+                <td>${item.id}</td>
+                <td>${item.apellidos} ${item.nombres}</td>
+                <td>${item.numeroPila}</td>
+            `;
+            tabla.tBodies[0].appendChild(fila);
+        });
+    }
+</script> -->
+
+
+
+<script>
+    const selectElement = document.querySelector('select[name="metodo"]');
+    const cosaSelect = document.querySelector('select[name="selectcosa"]');
+    const tipoSelect = document.querySelector('input[name="nombre"]');
+    const ordenarLink = document.getElementById('mi-formulario');
+
+    function actualizarEnlaceOrdenar() {
+        const selectedMetodo = selectElement.value;
+        const selectedCosa = cosaSelect.value;
+        const selectedTipo = tipoSelect.value;
+        ordenarLink.href = `/transaccion/buscar?metodo=${selectedMetodo}&selectcosa=${selectedCosa}&nombre=${selectedTipo}`;
+    }
+
+    selectElement.addEventListener('change', actualizarEnlaceOrdenar);
+    cosaSelect.addEventListener('change', actualizarEnlaceOrdenar);
+    tipoSelect.addEventListener('change', actualizarEnlaceOrdenar);
+</script>
+{% endblock %}

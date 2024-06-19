@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+{% block content %}
+
+<h2 class="text-white">Lista de personas </h2>
+<div class = "booking-from-body">
+    <a href="/personas/agregar" class="btn btn-danger">Agregar</a>
+    <!-- <a href="/personas/ordenar" class="btn btn-danger">Ordenar</a> -->
+    <table id="tabla" class="table text-white">
+        <thead>
+            <th>Nro</th>
+            <th>Boys</th>
+            <th>Npila</th>
+            <th>Actions</th>
+
+        </thead>
+        <tbody>
+            {% for item in lista %}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.apellidos}} {{item.nombres}}</td>
+                <td>{{item.numeroPila}}</td>
+                <td><a class="btn btn-info" href="/personas/editar/{{item.id}}">Modificar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+
+    </table>
+
+
+
+</div>
+{% endblock %}

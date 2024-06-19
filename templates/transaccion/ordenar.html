@@ -1,0 +1,98 @@
+{% extends "template.html" %}
+{% block content %}
+
+<h2 class="text-white">Lista de Transacciones </h2>
+<div class = "booking-from-body">
+    <!-- <a href="/personas/agregar" class="btn btn-danger">Agregar</a> -->
+    <!-- <a href="/personas/ordenar?metodo={{ request.args.get('metodo') }}" class="btn btn-primary">Ordenar</a> -->
+    
+
+    <form>
+        <select id="primer-select" name = "metodo">
+            <option >metodo a usar...</option>
+            <option value="1" >Quick sort</option>
+            <option value="2">Merge sort</option>
+            <option value="3">Sell sort</option>
+        </select>
+    
+        <select id="segundo-select" name="selectcosa">
+            <option >criterio a usar...</option>
+            <option value="_ventanilla" >Ventanilla</option>
+            <option value="_fecha">Fecha</option>
+        </select>
+    
+        <select id="tercer-select" name="selecttipo">
+            <option >tipo a usar...</option>
+            <option value="1" >ascendente</option>
+            <option value="2">descendente</option>
+        </select>
+    </form>
+    <a href="#" id="ordenar-link" class="btn btn-primary">Ordenar</a>
+
+    <table id="tabla" class="table text-white">
+        <thead>
+            <th>Nro</th>
+            <th>Ventanilla</th>
+            <th>Fecha</th>
+            <th>Detalle</th>
+            <!-- <th>Actions</th> -->
+
+        </thead>
+        <tbody>
+            {% for item in lista %}
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.ventanilla}}</td>
+                <td>{{item.fecha}}</td>
+                <td>{{item.detalle}}</td>
+                <!-- <td><a class="btn btn-info" href="/personas/editar/{{item.id}}">Modificar</a></td> -->
+            </tr>
+            {% endfor %}
+        </tbody>
+
+
+    </table>
+
+
+
+</div>
+
+<!-- <script>
+    
+
+    const selectElement = document.querySelector('select[name="metodo"]');
+    const cosaSelect = document.querySelector('select[name="selectcosa"]');
+    const tipoSelect = document.querySelector('select[name="selecttipo"]');
+    const ordenarLink = document.getElementById('ordenar-link');
+
+    selectElement.addEventListener('change', function() {
+        const selectedValue = selectElement.value;
+        const cosaValue = cosaSelect.value;
+        const tipoValue = tipoSelect.value;
+        ordenarLink.href = `/personas/ordenar?metodo=${selectedValue}&selectcosa=${cosaValue}&selecttipo=${tipoValue}`;
+    });
+
+    metodoSelect.addEventListener('change', actualizarEnlaceOrdenar);
+    cosaSelect.addEventListener('change', actualizarEnlaceOrdenar);
+    tipoSelect.addEventListener('change', actualizarEnlaceOrdenar);
+</script> -->
+
+<script>
+    const selectElement = document.querySelector('select[name="metodo"]');
+    const cosaSelect = document.querySelector('select[name="selectcosa"]');
+    const tipoSelect = document.querySelector('select[name="selecttipo"]');
+    const ordenarLink = document.getElementById('ordenar-link');
+
+    function actualizarEnlaceOrdenar() {
+        const selectedMetodo = selectElement.value;
+        const selectedCosa = cosaSelect.value;
+        const selectedTipo = tipoSelect.value;
+        ordenarLink.href = `/transaccion/ordenar?metodo=${selectedMetodo}&selectcosa=${selectedCosa}&selecttipo=${selectedTipo}`;
+    }
+
+    selectElement.addEventListener('change', actualizarEnlaceOrdenar);
+    cosaSelect.addEventListener('change', actualizarEnlaceOrdenar);
+    tipoSelect.addEventListener('change', actualizarEnlaceOrdenar);
+</script>
+
+{% endblock %}
